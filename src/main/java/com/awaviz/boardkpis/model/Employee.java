@@ -29,13 +29,16 @@ public class Employee {
 		super();
 	}
 
-	public Employee(String firstname, String lastname, String email) {
+	public Employee(Long id, String firstname, String lastname, String email) {
 		super();
+		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 	}
-	
+	public Long getId() {
+		return id;
+	}
 	public String getFirstname() {
 		return firstname;
 	}
