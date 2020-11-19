@@ -1,0 +1,31 @@
+<h2> List Of Employees</h2>
+
+
+<div class="table-responsive">
+  <table class="table table-stripped">
+    <thead class="thead-dark">
+      <tr>
+        <th>Ids</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Manage +</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor = "let employee of employees">
+        <td>{{employee.id}}</td>
+        <td>{{ employee.firstname}}</td>
+        <td>{{ employee.lastname}}</td>
+        <td>{{ employee.email}}</td>
+        <td>
+          <button (click) = "updateEmployee(employee.id)" class="btn btn-info">Update</button>
+          <button (click) = "deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+          <button (click) = "employeeDetails(employee.id)" class="btn btn-info" style="margin-left: 10px;">View</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
